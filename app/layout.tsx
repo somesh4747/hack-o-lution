@@ -1,29 +1,72 @@
-import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import '@/styles/globals.css'
+import { Metadata, Viewport } from 'next'
+import { Link } from '@nextui-org/link'
+import clsx from 'clsx'
 import localFont from 'next/font/local'
-import './globals.css'
 
-const GoogleFont = Roboto({
-    subsets: ['latin'],
-    weight: ['100', '300', '400', '500', '700', '900'],
-})
-const myFont = localFont({
-    src: '/Hacked-KerX.ttf',
-    display: 'swap',
-})
+import { Providers } from './providers'
+
+import { siteConfig } from '@/config/site'
+import { fontSans } from '@/config/fonts'
+import { Navbar } from '@/components/navbar'
+
 export const metadata: Metadata = {
-    title: 'HACK{0}LUTION',
-    description: 'BCA Department Hackathon',
+    title: {
+        default: siteConfig.name,
+        template: `%s - ${siteConfig.name}`,
+    },
+    description: siteConfig.description,
+    icons: {
+        icon: '/favicon.ico',
+    },
 }
+
+export const viewport: Viewport = {
+    themeColor: [
+        { media: '(prefers-color-scheme: light)', color: 'white' },
+        { media: '(prefers-color-scheme: dark)', color: 'black' },
+    ],
+}
+import { hackFonts } from '@/config/fonts'
 
 export default function RootLayout({
     children,
-}: Readonly<{
+}: {
     children: React.ReactNode
-}>) {
+}) {
     return (
-        <html lang="en">
-            <body className={myFont.className}>{children}</body>
+        <html suppressHydrationWarning lang="en">
+            <head />
+            <body
+                className={clsx(
+                    'min-h-screen bg-background antialiased',
+                    hackFonts.className
+                )}
+            >
+                <Providers
+                    themeProps={{ attribute: 'class', defaultTheme: 'dark' }}
+                >
+                    <div className="relative flex flex-col h-screen">
+                        <Navbar />
+                        <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+                            {children}
+                        </main>
+                        <footer className="w-full flex items-center justify-center py-3">
+                            <Link
+                                isExternal
+                                className="flex items-center gap-1 text-current"
+                                href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
+                                title="nextui.org homepage"
+                            >
+                                <span className="text-default-600">
+                                    Created with
+                                </span>
+                                <p className="text-primary">❤️</p>
+                            </Link>
+                        </footer>
+                    </div>
+                </Providers>
+            </body>
         </html>
     )
 }
