@@ -38,32 +38,20 @@ export default function RootLayout({
         <html suppressHydrationWarning lang="en">
             <head />
             <body
+                style={{ backgroundImage: "url('/hero1.jpg')" }}
                 className={clsx(
-                    'min-h-screen bg-background antialiased',
+                    ' bg-fixed bg-center bg-cover',
                     hackFonts.className
                 )}
             >
                 <Providers
                     themeProps={{ attribute: 'class', defaultTheme: 'dark' }}
                 >
-                    <div className="relative flex flex-col h-screen">
-                        <Navbar />
-                        <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+                    <Navbar />
+                    <div className="relative flex flex-col">
+                        <main className=" bg-gradient-to-b from-black/80 to-black/50 z-10">
                             {children}
                         </main>
-                        <footer className="w-full flex items-center justify-center py-3">
-                            <Link
-                                isExternal
-                                className="flex items-center gap-1 text-current"
-                                href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-                                title="nextui.org homepage"
-                            >
-                                <span className="text-default-600">
-                                    Created with
-                                </span>
-                                <p className="text-primary">❤️</p>
-                            </Link>
-                        </footer>
                     </div>
                 </Providers>
             </body>
