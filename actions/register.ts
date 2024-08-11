@@ -41,50 +41,14 @@ export default async function register(
     // we will not consider multiple registration
     if (leader) return { error: 'Leader has Already Registered' }
 
-    if (parseInt(teamSize) === 3) {
-        const team = await db.team.create({
-            data: {
-                teamName: teamName,
-                email: leaderEmail,
-                mobile: leaderMobile,
-                idea: projectIdea,
-                members: {
-                    createMany: {
-                        data: [
-                            {
-                                name: leadername,
-                                github: leaderGithub,
-                                isleader: true,
-                                email: leaderEmail,
-                            },
-                            {
-                                name: memberOneName,
-                                email: memberOneEmail,
-                                github: memberOneGithub,
-                            },
-                            {
-                                name: memberTwoName,
-                                email: memberTwoEmail,
-                                github: memberTwoGithub,
-                            },
-                        ],
-                    },
-                },
-            },
-        })
-        if (
-            !memberOneEmail ||
-            !memberOneName ||
-            !memberTwoEmail ||
-            !memberTwoName
-        )
-            return { error: 'Member Error' }
-        await sendRegistrationEmail(leaderEmail, leadername, teamName)
-        await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
-        await sendRegistrationEmail(memberTwoEmail, memberTwoName, teamName)
-        return { success: 'Registered Successfully' }
-    }
-    if (parseInt(teamSize) === 4) {
+    if (
+        memberOneEmail &&
+        memberOneName &&
+        memberTwoEmail &&
+        memberTwoName &&
+        memberThreeEmail &&
+        memberThreeName
+    ) {
         const team = await db.team.create({
             data: {
                 teamName: teamName,
@@ -120,15 +84,7 @@ export default async function register(
                 },
             },
         })
-        if (
-            !memberOneEmail ||
-            !memberOneName ||
-            !memberTwoEmail ||
-            !memberTwoName ||
-            !memberThreeEmail ||
-            !memberThreeName
-        )
-            return { error: 'Member Error' }
+
         await sendRegistrationEmail(leaderEmail, leadername, teamName)
         await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
         await sendRegistrationEmail(memberTwoEmail, memberTwoName, teamName)
@@ -136,7 +92,46 @@ export default async function register(
         return { success: 'Registered Successfully' }
     }
 
+    if (memberOneEmail && memberOneName && memberTwoEmail && memberTwoName) {
+        const team = await db.team.create({
+            data: {
+                teamName: teamName,
+                email: leaderEmail,
+                mobile: leaderMobile,
+                idea: projectIdea,
+                members: {
+                    createMany: {
+                        data: [
+                            {
+                                name: leadername,
+                                github: leaderGithub,
+                                isleader: true,
+                                email: leaderEmail,
+                            },
+                            {
+                                name: memberOneName,
+                                email: memberOneEmail,
+                                github: memberOneGithub,
+                            },
+                            {
+                                name: memberTwoName,
+                                email: memberTwoEmail,
+                                github: memberTwoGithub,
+                            },
+                        ],
+                    },
+                },
+            },
+        })
+
+        await sendRegistrationEmail(leaderEmail, leadername, teamName)
+        await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
+        await sendRegistrationEmail(memberTwoEmail, memberTwoName, teamName)
+        return { success: 'Registered Successfully' }
+    }
+
     // /default two members
+    // else{}
     const team = await db.team.create({
         data: {
             teamName: teamName,
@@ -163,9 +158,10 @@ export default async function register(
         },
     })
     // console.log(team)
-
-    await sendRegistrationEmail(leaderEmail, leadername, teamName)
-    await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
+    if (parseInt(teamSize) === 2) {
+        await sendRegistrationEmail(leaderEmail, leadername, teamName)
+        await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
+    }
 
     return { success: 'Registered Successfully' }
 }
