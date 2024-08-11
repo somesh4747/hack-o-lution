@@ -29,6 +29,7 @@ export default function Home() {
             y: 0,
             transition: {
                 type: 'spring',
+                duration: 1.5,
                 staggerChildren: 0.1,
             },
         },
@@ -72,8 +73,8 @@ export default function Home() {
                 </div>
                 <div>
                     <div className="text-3xl md:text-7xl z-50 relative text-yellow-100">
-                        <span>{days}</span>:<span className="">{hours}</span>:
-                        <span>{minutes}</span>:
+                        <span>{days}</span>.<span className="">{hours}</span>.
+                        <span>{minutes}</span>.
                         <span className="">{seconds}</span>
                     </div>
                 </div>

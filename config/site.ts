@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-    name: 'Hack-0-lution',
+    name: 'Hack-{0}-lution',
     description:
         'Make beautiful websites regardless of your design experience.',
     navItems: [
@@ -13,24 +13,19 @@ export const siteConfig = {
             label: 'Rules',
             href: '/rules',
         },
-
+        {
+            label: 'Register',
+            href: '/register',
+        },
     ],
     navMenuItems: [
         {
-            label: 'Dashboard',
-            href: '/dashboard',
+            label: 'Home',
+            href: '/home',
         },
         {
-            label: 'Projects',
-            href: '/projects',
-        },
-        {
-            label: 'Team',
-            href: '/team',
-        },
-        {
-            label: 'Logout',
-            href: '/logout',
+            label: 'Register',
+            href: '/register',
         },
     ],
     links: {

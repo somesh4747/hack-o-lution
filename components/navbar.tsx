@@ -36,8 +36,9 @@ export const Navbar = () => {
                         className="flex justify-start items-center gap-1"
                         href="/"
                     >
-                        <Logo />
-                        <p className="font-bold text-inherit">&#123;0&#125;</p>
+                        {/* <Logo /> */}
+                        {/* <img src="/logo.png" className='w-[3rem] mix-blend-screen' alt="" /> */}
+                        <p className="font-bold text-inherit text-2xl">&#123;0&#125;</p>
                     </NextLink>
                 </NavbarBrand>
                 <ul className="hidden lg:flex gap-4 justify-start ml-2">
@@ -47,7 +48,7 @@ export const Navbar = () => {
                                 className={clsx(
                                     linkStyles({ color: 'foreground' }),
                                     'data-[active=true]:text-primary data-[active=true]:font-medium',
-                                    'tracking-wide'
+                                    'tracking-wide text-xl'
                                 )}
                                 color="foreground"
                                 href={item.href}
