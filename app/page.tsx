@@ -80,9 +80,9 @@ export default function Home() {
                 </div>
                 <div className="mt-8 z-50 backdrop-blur-xl">
                     <Snippet hideCopyButton hideSymbol variant="bordered">
-                        <span className=" md:text-2xl">
+                        <span className=" md:text-xl">
                             Are You Excited{' '}
-                            <Code color="danger" className="md:text-2xl">
+                            <Code color="danger" className="md:text-xl">
                                 IEM/Ashram ?
                             </Code>
                         </span>
@@ -91,6 +91,9 @@ export default function Home() {
             </section>
             <section>
                 <Information />
+            </section>
+            <section>
+                
             </section>
         </div>
     )

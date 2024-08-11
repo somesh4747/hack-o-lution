@@ -40,7 +40,7 @@ export default function RootLayout({
             <body
                 style={{ backgroundImage: "url('/hero2.jpg')" }}
                 className={clsx(
-                    ' bg-fixed bg-center bg-cover',
+                    ' bg-fixed bg-center bg-cover ',
                     hackFonts.className
                 )}
             >
@@ -48,8 +48,8 @@ export default function RootLayout({
                     themeProps={{ attribute: 'class', defaultTheme: 'dark' }}
                 >
                     <Navbar />
-                    <div className="relative flex flex-col">
-                        <main className=" bg-gradient-to-b from-black/80 to-black/50 z-10">
+                    <div className="relative flex flex-col ">
+                        <main className="bg-gradient-to-b from-black/60 to-black/50 z-10 ">
                             {children}
                         </main>
                     </div>

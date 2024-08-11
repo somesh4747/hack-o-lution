@@ -23,7 +23,7 @@ export default async function register(
     const memberThreeEmail = formData.get('memberThreeEmail')?.toString()
     const memberThreeGithub = formData.get('memberThreeGithub')?.toString()
 
-    console.log(formData)
+    // console.log(formData)
 
     if (!teamName) return { error: 'no team name' }
     if (!leadername) return { error: 'no leader name' }

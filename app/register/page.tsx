@@ -52,7 +52,7 @@ export default function RegisterPage() {
                                     label="Select Team Size"
                                     required
                                     isRequired
-                                    className="my-5"
+                                    className="my-5 "
                                     name="size"
                                 >
                                     <SelectItem
