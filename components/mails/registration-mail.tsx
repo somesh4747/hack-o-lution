@@ -18,13 +18,13 @@ export const ResgistrationMailTemplete = ({
     name,
     teamName,
 }: {
-    name: string
+    name: string[]
     teamName?: string
 }) => {
     return (
         <Html>
             <Head />
-            <Preview>Thank you {name}</Preview>
+            <Preview>Thank you</Preview>
             <Body style={main}>
                 <Container>
                     <Section style={content}>
@@ -45,7 +45,7 @@ export const ResgistrationMailTemplete = ({
                                         textAlign: 'center',
                                     }}
                                 >
-                                    Hi {name},
+                                    Hi {teamName},
                                 </Heading>
                                 <Heading
                                     as="h2"
@@ -60,8 +60,17 @@ export const ResgistrationMailTemplete = ({
                                 </Heading>
 
                                 <Text style={paragraph}>
-                                    <b>Team Name: </b>
-                                    {teamName}
+                                    <b>Members: </b>
+                                    {name.map((e, index) => {
+                                        return (
+                                            <span key={index}>
+                                                {e}
+                                                {index < name.length - 1
+                                                    ? ','
+                                                    : ''}{' '}
+                                            </span>
+                                        )
+                                    })}
                                 </Text>
                                 <Text style={{ ...paragraph, marginTop: -5 }}>
                                     <b>Location: IEM/Ashram</b>
@@ -87,7 +96,7 @@ export const ResgistrationMailTemplete = ({
                             color: 'rgb(0,0,0, 0.7)',
                         }}
                     >
-                        © 2024 | HACK&#123;0&#125;LUTION, Institute of
+                        &copy; 2024 | HACK&#123;0&#125;LUTION, Institute of
                         Engineering & Management, Salt Lake, Street No. 27,
                         Kolkata - 700102
                     </Text>

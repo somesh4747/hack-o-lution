@@ -4,8 +4,8 @@ import ResgistrationMailTemplete from '@/components/mails/registration-mail'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export const sendRegistrationEmail = async (
-    email: string,
-    name: string,
+    email: string[],
+    name: string[],
     teamName: string
 ) => {
     await resend.emails.send({

@@ -85,10 +85,14 @@ export default async function register(
             },
         })
 
-        await sendRegistrationEmail(leaderEmail, leadername, teamName)
-        await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
-        await sendRegistrationEmail(memberTwoEmail, memberTwoName, teamName)
-        await sendRegistrationEmail(memberThreeEmail, memberTwoName, teamName)
+        await sendRegistrationEmail(
+            [leaderEmail, memberOneEmail, memberTwoEmail, memberThreeEmail],
+            [leadername, memberOneName, memberTwoName, memberThreeName],
+            teamName
+        )
+        // await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
+        // await sendRegistrationEmail(memberTwoEmail, memberTwoName, teamName)
+        // await sendRegistrationEmail(memberThreeEmail, memberTwoName, teamName)
         return { success: 'Registered Successfully' }
     }
 
@@ -123,10 +127,14 @@ export default async function register(
                 },
             },
         })
-
-        await sendRegistrationEmail(leaderEmail, leadername, teamName)
-        await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
-        await sendRegistrationEmail(memberTwoEmail, memberTwoName, teamName)
+        await sendRegistrationEmail(
+            [leaderEmail, memberOneEmail, memberTwoEmail],
+            [leadername, memberOneName, memberTwoName],
+            teamName
+        )
+        // await sendRegistrationEmail(leaderEmail, leadername, teamName)
+        // await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
+        // await sendRegistrationEmail(memberTwoEmail, memberTwoName, teamName)
         return { success: 'Registered Successfully' }
     }
 
@@ -159,8 +167,13 @@ export default async function register(
     })
     // console.log(team)
     if (parseInt(teamSize) === 2) {
-        await sendRegistrationEmail(leaderEmail, leadername, teamName)
-        await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
+        await sendRegistrationEmail(
+            [leaderEmail, memberOneEmail],
+            [leadername, memberOneName],
+            teamName
+        )
+        // await sendRegistrationEmail(leaderEmail, leadername, teamName)
+        // await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
     }
 
     return { success: 'Registered Successfully' }
