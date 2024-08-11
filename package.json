@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
-        "postinstall": "prisma gererate"
+        "postinstall": "prisma generate"
     },
     "dependencies": {
         "@nextui-org/avatar": "^2.0.32",
