@@ -21,7 +21,11 @@ export const siteConfig = {
     navMenuItems: [
         {
             label: 'Home',
-            href: '/home',
+            href: '/',
+        },
+        {
+            label: 'Rules',
+            href: '/rules',
         },
         {
             label: 'Register',

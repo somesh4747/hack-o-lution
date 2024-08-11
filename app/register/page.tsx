@@ -334,6 +334,7 @@ export default function RegisterPage() {
                                     isRequired
                                     required
                                     size="lg"
+                                    radius="sm"
                                     labelPlacement="outside"
                                     placeholder="Enter Your project idea"
                                     className="text-3xl"

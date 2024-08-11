@@ -8,7 +8,7 @@ import Information from '@/components/information'
 
 export default function Home() {
     // using the event date to create a timer
-    const eventDate = new Date('September 14, 2024 0:00:00')
+    const eventDate = new Date('September 14, 2024 9:00:00')
     const {
         totalSeconds,
         seconds,

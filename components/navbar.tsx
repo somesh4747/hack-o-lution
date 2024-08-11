@@ -38,7 +38,9 @@ export const Navbar = () => {
                     >
                         {/* <Logo /> */}
                         {/* <img src="/logo.png" className='w-[3rem] mix-blend-screen' alt="" /> */}
-                        <p className="font-bold text-inherit text-2xl">&#123;0&#125;</p>
+                        <p className="font-bold text-inherit text-2xl">
+                            &#123;0&#125;
+                        </p>
                     </NextLink>
                 </NavbarBrand>
                 <ul className="hidden lg:flex gap-4 justify-start ml-2">
@@ -78,7 +80,7 @@ export const Navbar = () => {
                     >
                         <GithubIcon className="text-default-500" />
                     </Link>
-                    <ThemeSwitch />
+                    {/* <ThemeSwitch /> */}
                 </NavbarItem>
             </NavbarContent>
 
@@ -90,7 +92,7 @@ export const Navbar = () => {
                 >
                     <GithubIcon className="text-default-500" />
                 </Link>
-                <ThemeSwitch />
+                {/* <ThemeSwitch /> */}
                 <NavbarMenuToggle />
             </NavbarContent>
 
@@ -99,20 +101,9 @@ export const Navbar = () => {
                 <div className="mx-4 mt-2 flex flex-col gap-2">
                     {siteConfig.navMenuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
-                            <Link
-                                color={
-                                    index === 2
-                                        ? 'primary'
-                                        : index ===
-                                            siteConfig.navMenuItems.length - 1
-                                          ? 'danger'
-                                          : 'foreground'
-                                }
-                                href="#"
-                                size="lg"
-                            >
+                            <a href={item.href} className="tracking-wide">
                                 {item.label}
-                            </Link>
+                            </a>
                         </NavbarMenuItem>
                     ))}
                 </div>

@@ -1,5 +1,6 @@
 'use server'
 import db from '@/utils/db'
+import { sendRegistrationEmail } from '@/utils/mail'
 
 export default async function register(
     prev: unknown,
@@ -29,6 +30,8 @@ export default async function register(
     if (!leaderEmail) return { error: 'no leader email' }
     if (!teamSize) return { error: 'invalid team size' }
     if (!leaderMobile) return { error: 'enter Leader mobile number' }
+    if (!memberOneEmail || !memberOneName)
+        return { error: 'Provide member 2 properly' }
 
     const leader = await db.team.findFirst({
         where: {
@@ -69,6 +72,16 @@ export default async function register(
                 },
             },
         })
+        if (
+            !memberOneEmail ||
+            !memberOneName ||
+            !memberTwoEmail ||
+            !memberTwoName
+        )
+            return { error: 'Member Error' }
+        await sendRegistrationEmail(leaderEmail, leadername, teamName)
+        await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
+        await sendRegistrationEmail(memberTwoEmail, memberTwoName, teamName)
         return { success: 'Registered Successfully' }
     }
     if (parseInt(teamSize) === 4) {
@@ -107,6 +120,19 @@ export default async function register(
                 },
             },
         })
+        if (
+            !memberOneEmail ||
+            !memberOneName ||
+            !memberTwoEmail ||
+            !memberTwoName ||
+            !memberThreeEmail ||
+            !memberThreeName
+        )
+            return { error: 'Member Error' }
+        await sendRegistrationEmail(leaderEmail, leadername, teamName)
+        await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
+        await sendRegistrationEmail(memberTwoEmail, memberTwoName, teamName)
+        await sendRegistrationEmail(memberThreeEmail, memberTwoName, teamName)
         return { success: 'Registered Successfully' }
     }
 
@@ -137,6 +163,9 @@ export default async function register(
         },
     })
     // console.log(team)
+
+    await sendRegistrationEmail(leaderEmail, leadername, teamName)
+    await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
 
     return { success: 'Registered Successfully' }
 }
