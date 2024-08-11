@@ -9,10 +9,10 @@ export default function Information() {
             <div className="flex flex-col justify-center items-center ">
                 <div className="text-7xl font-medium">about</div>
                 <div className="max-w-[900px] text-2xl h-auto p-4 tracking-wide text-center ">
-                    "HACK&#123;<span className="text-green-300">0</span>
-                    &#125;LUTION" is the first time-ever hackathon at the Ashram
-                    Campus, it&rsquo;s the great opportunities for all tech
-                    enthusiasts to dive into a 12 hour long marathon of
+                    &quot;HACK&#123;<span className="text-green-300">0</span>
+                    &#125;LUTION&quot; is the first time-ever hackathon at the
+                    Ashram Campus, it&rsquo;s the great opportunities for all
+                    tech enthusiasts to dive into a 12 hour long marathon of
                     creativity, innovation, coding and collaboration. Whether
                     you&rsquo;re an experienced developer or just starting your
                     journey, Hackolution provides you a platform to challenge
@@ -30,7 +30,7 @@ export default function Information() {
             <div className="flex justify-center items-center mt-8">
                 <Snippet hideCopyButton hideSymbol variant="bordered">
                     <span className=" md:text-xl">
-                        You don't know{' '}
+                        You don&apos;t know{' '}
                         <Code color="danger" className="md:text-xl">
                             <Link href={'/rules'}>Rules ?</Link>
                         </Code>
