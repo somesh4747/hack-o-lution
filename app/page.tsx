@@ -92,9 +92,7 @@ export default function Home() {
             <section>
                 <Information />
             </section>
-            <section>
-                
-            </section>
+            <section></section>
         </div>
     )
 }

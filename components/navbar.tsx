@@ -39,7 +39,8 @@ export const Navbar = () => {
                         {/* <Logo /> */}
                         {/* <img src="/logo.png" className='w-[3rem] mix-blend-screen' alt="" /> */}
                         <p className="font-bold text-inherit text-2xl">
-                            &#123;0&#125;
+                            &#123;<span className="text-green-400">0</span>
+                            &#125;
                         </p>
                     </NextLink>
                 </NavbarBrand>
@@ -73,13 +74,7 @@ export const Navbar = () => {
                     >
                         <DiscordIcon className="text-default-500" />
                     </Link>
-                    <Link
-                        isExternal
-                        aria-label="Github"
-                        href={siteConfig.links.github}
-                    >
-                        <GithubIcon className="text-default-500" />
-                    </Link>
+
                     {/* <ThemeSwitch /> */}
                 </NavbarItem>
             </NavbarContent>

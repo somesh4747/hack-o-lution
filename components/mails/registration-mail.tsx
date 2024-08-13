@@ -19,12 +19,12 @@ export const ResgistrationMailTemplete = ({
     teamName,
 }: {
     name: string[]
-    teamName?: string
+    teamName: string
 }) => {
     return (
         <Html>
             <Head />
-            <Preview>Thank you</Preview>
+            <Preview>Thank you {teamName}</Preview>
             <Body style={main}>
                 <Container>
                     <Section style={content}>
