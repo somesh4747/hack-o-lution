@@ -38,7 +38,7 @@ export default function RootLayout({
         <html suppressHydrationWarning lang="en">
             <head />
             <body
-                style={{ backgroundImage: "url('/hero3.jpg')" }}
+                style={{ backgroundImage: "url('/hero4.jpg')" }}
                 className={clsx(
                     ' bg-fixed bg-center bg-cover ',
                     hackFonts.className

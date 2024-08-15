@@ -33,7 +33,9 @@ export const siteConfig = {
         },
     ],
     links: {
-        github: 'https://github.com/nextui-org/nextui',
-        discord: 'https://discord.gg/9b6yyZKmH4',
+        // github: 'https://github.com/nextui-org/nextui',
+        discord: 'https://discord.gg/5D3rFDJS',
+        instagram:
+            'https://www.instagram.com/hackolution?igsh=MXd4b3VwaDBneXJsbg==',
     },
 }

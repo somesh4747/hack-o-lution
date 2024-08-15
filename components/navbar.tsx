@@ -7,8 +7,7 @@ import {
     NavbarItem,
     NavbarMenuItem,
 } from '@nextui-org/navbar'
-import { Button } from '@nextui-org/button'
-import { Kbd } from '@nextui-org/kbd'
+
 import { Link } from '@nextui-org/link'
 import { Input } from '@nextui-org/input'
 import { link as linkStyles } from '@nextui-org/theme'
@@ -26,6 +25,7 @@ import {
     SearchIcon,
     Logo,
 } from '@/components/icons'
+import { FaInstagram } from 'react-icons/fa'
 
 export const Navbar = () => {
     return (
@@ -70,6 +70,13 @@ export const Navbar = () => {
                     <Link
                         isExternal
                         aria-label="Discord"
+                        href={siteConfig.links.instagram}
+                    >
+                        <FaInstagram className="text-default-500 scale-125" />
+                    </Link>
+                    <Link
+                        isExternal
+                        aria-label="Discord"
                         href={siteConfig.links.discord}
                     >
                         <DiscordIcon className="text-default-500" />
@@ -83,9 +90,9 @@ export const Navbar = () => {
                 <Link
                     isExternal
                     aria-label="Github"
-                    href={siteConfig.links.github}
+                    href={siteConfig.links.discord}
                 >
-                    <GithubIcon className="text-default-500" />
+                    <DiscordIcon className="text-default-500" />
                 </Link>
                 {/* <ThemeSwitch /> */}
                 <NavbarMenuToggle />

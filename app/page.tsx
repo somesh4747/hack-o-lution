@@ -5,10 +5,13 @@ import { Code } from '@nextui-org/code'
 import { motion, Variants } from 'framer-motion'
 import { useTimer } from 'react-timer-hook'
 import Information from '@/components/information'
+import AboutIdeas from '@/components/about-ideas'
+import Admins from '@/components/admins'
+import Footer from '@/components/footer'
 
 export default function Home() {
     // using the event date to create a timer
-    const eventDate = new Date('September 14, 2024 9:00:00')
+    const eventDate = new Date('November 11, 2024 9:00:00')
     const {
         totalSeconds,
         seconds,
@@ -68,7 +71,7 @@ export default function Home() {
                         <motion.span variants={ani}>I</motion.span>
                         <motion.span variants={ani}>O</motion.span>
                         <motion.span variants={ani}>N</motion.span>
-                        {/* HCK&#123;0&#125;LUTION */}
+                        {/* HACK&#123;0&#125;LUTION */}
                     </motion.div>
                 </div>
                 <div>
@@ -92,7 +95,17 @@ export default function Home() {
             <section>
                 <Information />
             </section>
-            <section></section>
+            <section className="flex justify-center items-center mt-9 flex-col">
+                <h3 className="text-5xl md:text-7xl my-8">Project Ideas</h3>
+                <AboutIdeas />
+            </section>
+            <section className="flex justify-center items-center mt-9 flex-col my-5">
+                <h3 className="text-5xl md:text-7xl my-8">Core Members</h3>
+                <Admins />
+            </section>
+            <footer>
+                <Footer />
+            </footer>
         </div>
     )
 }

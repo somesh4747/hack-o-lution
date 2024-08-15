@@ -10,7 +10,7 @@ export default function AboutPage() {
                 <li>
                     <div className="md:text-2xl text-left  font-bold">
                         ***In matters of violating any rules, the decision of
-                        the faculty Coordinators and admin is final. Any
+                        the faculty Coordinators and Admins is final. Any
                         misbehavior of any teammate will lead to the
                         disqualification of the team***.
                     </div>
