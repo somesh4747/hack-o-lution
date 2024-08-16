@@ -1,12 +1,6 @@
 import React from 'react'
-import {
-    Card,
-    CardHeader,
-    CardBody,
-    CardFooter,
-    Image,
-    Button,
-} from '@nextui-org/react'
+import { Card, CardHeader, CardBody, Button } from '@nextui-org/react'
+import Image from 'next/image'
 
 export default function AboutIdeas() {
     return (
@@ -21,7 +15,8 @@ export default function AboutIdeas() {
                     </h4>
                 </CardHeader>
                 <Image
-                    removeWrapper
+                    width={400}
+                    height={400}
                     alt="Card background"
                     className="z-0 w-full h-full object-cover"
                     src="/ideas/brain.png"
@@ -37,7 +32,8 @@ export default function AboutIdeas() {
                     </h4>
                 </CardHeader>
                 <Image
-                    removeWrapper
+                    width={400}
+                    height={400}
                     alt="Card background"
                     className="z-0 w-full h-full object-cover"
                     src="/ideas/ai.jpg"
@@ -53,7 +49,8 @@ export default function AboutIdeas() {
                     </h4>
                 </CardHeader>
                 <Image
-                    removeWrapper
+                    width={400}
+                    height={400}
                     alt="Card background"
                     className="z-0 w-full h-full object-cover"
                     src="/ideas/health.jpg"
@@ -72,7 +69,8 @@ export default function AboutIdeas() {
                     </h4>
                 </CardHeader>
                 <Image
-                    removeWrapper
+                    width={400}
+                    height={400}
                     alt="Card example background"
                     className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
                     src="/ideas/web2.jpg"
@@ -91,7 +89,8 @@ export default function AboutIdeas() {
                     </h4>
                 </CardHeader>
                 <Image
-                    removeWrapper
+                    width={400}
+                    height={400}
                     alt="Relaxing app background"
                     className="z-0 w-full h-full object-cover"
                     src="/ideas/edu.jpg"

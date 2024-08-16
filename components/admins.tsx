@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card, CardFooter, Image, Button } from '@nextui-org/react'
+import { Card, CardFooter, Button } from '@nextui-org/react'
+import Image from 'next/image'
 
 export default function Admins() {
     return (
@@ -13,7 +14,7 @@ export default function Admins() {
             />
 
             <Cards
-                img="/admins/soumodip.jpg"
+                img="/admins/soumodip4.jpg"
                 name="Soumodip Das"
                 duty="Manager"
             />
@@ -28,19 +29,19 @@ function Cards({
     duty,
     img,
 }: {
-    name?: string
+    name: string
     duty?: string
-    img?: string
+    img: string
 }) {
     // console.log(window.matchMedia('(max-width: 400px)').matches ? 400 : 600)
 
     return (
         <Card isFooterBlurred radius="lg" className="border-none">
-            <Image
+            <img
                 alt={name}
-                className="object-cover"
+                className="object-cover h-[400px]"
                 height={400}
-                src={img}
+            src={img}
                 width={250}
             />
             <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10 h-[80px]">
