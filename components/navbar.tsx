@@ -1,3 +1,4 @@
+'use client'
 import {
     Navbar as NextUINavbar,
     NavbarContent,
@@ -7,11 +8,13 @@ import {
     NavbarItem,
     NavbarMenuItem,
 } from '@nextui-org/navbar'
+import { useSession } from 'next-auth/react'
 
 import { Link } from '@nextui-org/link'
 import { Input } from '@nextui-org/input'
 import { link as linkStyles } from '@nextui-org/theme'
 import NextLink from 'next/link'
+import { auth } from '@/auth'
 
 import clsx from 'clsx'
 
@@ -26,8 +29,11 @@ import {
     Logo,
 } from '@/components/icons'
 import { FaInstagram } from 'react-icons/fa'
+import { useRouter } from 'next/navigation'
 
 export const Navbar = () => {
+    const session = useSession()
+    const router = useRouter()
     return (
         <NextUINavbar maxWidth="xl" position="sticky">
             <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -36,8 +42,6 @@ export const Navbar = () => {
                         className="flex justify-start items-center gap-1"
                         href="/"
                     >
-                        {/* <Logo /> */}
-                        {/* <img src="/logo.png" className='w-[3rem] mix-blend-screen' alt="" /> */}
                         <p className="font-bold text-inherit text-2xl">
                             &#123;<span className="text-green-400">0</span>
                             &#125;
@@ -45,21 +49,33 @@ export const Navbar = () => {
                     </NextLink>
                 </NavbarBrand>
                 <ul className="hidden lg:flex gap-4 justify-start ml-2">
-                    {siteConfig.navItems.map((item) => (
-                        <NavbarItem key={item.href}>
-                            <NextLink
-                                className={clsx(
-                                    linkStyles({ color: 'foreground' }),
-                                    'data-[active=true]:text-primary data-[active=true]:font-medium',
-                                    'tracking-wide text-xl'
-                                )}
-                                color="foreground"
-                                href={item.href}
-                            >
-                                {item.label}
-                            </NextLink>
-                        </NavbarItem>
-                    ))}
+                    <NextLink
+                        href={'/'}
+                        className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
+                    >
+                        Home
+                    </NextLink>
+                    <NextLink
+                        href={'/rules'}
+                        className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
+                    >
+                        Rules
+                    </NextLink>
+                    <NextLink
+                        href={'/register'}
+                        className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
+                    >
+                        Register
+                    </NextLink>
+                    <NextLink
+                        href={'/login'}
+                        className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
+                        onClick={() => router.push('/dashBoard')}
+                    >
+                        {session?.status == 'authenticated'
+                            ? 'DashBoard'
+                            : 'Login'}
+                    </NextLink>
                 </ul>
             </NavbarContent>
             <NavbarContent
@@ -99,15 +115,31 @@ export const Navbar = () => {
             </NavbarContent>
 
             <NavbarMenu>
-                {/* {searchInput} */}
                 <div className="mx-4 mt-2 flex flex-col gap-2">
-                    {siteConfig.navMenuItems.map((item, index) => (
-                        <NavbarMenuItem key={`${item}-${index}`}>
-                            <a href={item.href} className="tracking-wide">
-                                {item.label}
-                            </a>
-                        </NavbarMenuItem>
-                    ))}
+                    <a
+                        href={'/'}
+                        className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
+                    >
+                        Home
+                    </a>
+                    <a
+                        href={'/rules'}
+                        className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
+                    >
+                        Rules
+                    </a>
+                    <a
+                        href={'/register'}
+                        className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
+                    >
+                        Register
+                    </a>
+                    <a
+                        href={'/login'}
+                        className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
+                    >
+                        {session ? 'DashBoard' : 'Login'}
+                    </a>
                 </div>
             </NavbarMenu>
         </NextUINavbar>

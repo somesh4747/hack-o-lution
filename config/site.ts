@@ -1,5 +1,8 @@
 export type SiteConfig = typeof siteConfig
-
+import { auth } from '@/auth'
+async function getSession() {
+    return await auth()
+}
 export const siteConfig = {
     name: 'Hack-{0}-lution',
     description:
@@ -17,6 +20,10 @@ export const siteConfig = {
             label: 'Register',
             href: '/register',
         },
+        {
+            label: 'login',
+            href: '/login',
+        },
     ],
     navMenuItems: [
         {
@@ -30,6 +37,10 @@ export const siteConfig = {
         {
             label: 'Register',
             href: '/register',
+        },
+        {
+            label: 'Login',
+            href: '/login',
         },
     ],
     links: {

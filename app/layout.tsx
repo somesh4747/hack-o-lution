@@ -28,6 +28,7 @@ export const viewport: Viewport = {
     ],
 }
 import { hackFonts } from '@/config/fonts'
+import { SessionProvider } from 'next-auth/react'
 
 export default function RootLayout({
     children,
@@ -47,12 +48,14 @@ export default function RootLayout({
                 <Providers
                     themeProps={{ attribute: 'class', defaultTheme: 'dark' }}
                 >
-                    <Navbar />
-                    <div className="relative flex flex-col ">
-                        <main className="bg-gradient-to-b from-black/60 to-black/50 z-10 ">
-                            {children}
-                        </main>
-                    </div>
+                    <SessionProvider>
+                        <Navbar />
+                        <div className="relative flex flex-col ">
+                            <main className="bg-gradient-to-b from-black/60 to-black/50 z-10 ">
+                                {children}
+                            </main>
+                        </div>
+                    </SessionProvider>
                 </Providers>
             </body>
         </html>
