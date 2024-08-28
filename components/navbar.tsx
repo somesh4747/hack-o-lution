@@ -72,9 +72,7 @@ export const Navbar = () => {
                         className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
                         onClick={() => router.push('/dashBoard')}
                     >
-                        {session?.status == 'authenticated'
-                            ? 'DashBoard'
-                            : 'Login'}
+                        {session.data ? 'DashBoard' : 'Login'}
                     </NextLink>
                 </ul>
             </NavbarContent>

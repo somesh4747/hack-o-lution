@@ -15,7 +15,6 @@ export default middleware(async (req) => {
         }
     }
 
-
     // if the user is not logged in then user should not access the dashboard
     if (isDashboardRoute) {
         if (!isLoggedIn) {

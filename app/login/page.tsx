@@ -77,7 +77,6 @@ export default function LoginPage() {
 
 function SubmitButton() {
     const { pending } = useFormStatus()
-    const router = useRouter()
     return (
         <Button
             type="submit"
@@ -85,7 +84,6 @@ function SubmitButton() {
             className="w-full text-xl"
             disabled={pending}
             isLoading={pending}
-            onClick={() => router.push('/dashBoard')}
         >
             Login
         </Button>

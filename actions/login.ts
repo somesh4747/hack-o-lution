@@ -17,7 +17,7 @@ export async function login(
             mobile,
             redirectTo: '/dashboard',
         })
-        // revalidatePath('/dashboard')
+        revalidatePath('/dashboard')
         return {
             success: 'Logged in',
         }
