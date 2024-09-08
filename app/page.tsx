@@ -8,6 +8,7 @@ import Information from '@/components/information'
 import AboutIdeas from '@/components/about-ideas'
 import Admins from '@/components/admins'
 import Footer from '@/components/footer'
+import FacultyCoOrdinators from '@/components/faculty'
 
 export default function Home() {
     // using the event date to create a timer
@@ -102,6 +103,12 @@ export default function Home() {
             <section className="flex justify-center items-center mt-9 flex-col my-5">
                 <h3 className="text-5xl md:text-7xl my-8">Core Members</h3>
                 <Admins />
+            </section>
+            <section className="flex justify-center items-center mt-9 flex-col my-5">
+                <h3 className="text-5xl md:text-7xl my-8 text-center">
+                    Faculty Co-ordinators
+                </h3>
+                <FacultyCoOrdinators />
             </section>
             <footer>
                 <Footer />
