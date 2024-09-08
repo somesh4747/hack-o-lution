@@ -6,12 +6,19 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export const sendRegistrationEmail = async (
     email: string[],
     name: string[],
-    teamName: string
+    teamName: string,
+    leaderMail: string,
+    pass: string
 ) => {
     await resend.emails.send({
         from: 'Team HACK{0}LUTION <hack@someshdev.in>',
         to: email,
         subject: 'HACK{O}LUTION Registration',
-        react: ResgistrationMailTemplete({ name: name, teamName: teamName }),
+        react: ResgistrationMailTemplete({
+            name: name,
+            teamName: teamName,
+            leaderMail: leaderMail,
+            leaderMobile: pass,
+        }),
     })
 }

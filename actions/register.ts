@@ -88,7 +88,9 @@ export default async function register(
         await sendRegistrationEmail(
             [leaderEmail, memberOneEmail, memberTwoEmail, memberThreeEmail],
             [leadername, memberOneName, memberTwoName, memberThreeName],
-            teamName
+            teamName,
+            leaderEmail,
+            leaderMobile
         )
         // await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
         // await sendRegistrationEmail(memberTwoEmail, memberTwoName, teamName)
@@ -130,7 +132,9 @@ export default async function register(
         await sendRegistrationEmail(
             [leaderEmail, memberOneEmail, memberTwoEmail],
             [leadername, memberOneName, memberTwoName],
-            teamName
+            teamName,
+            leaderEmail,
+            leaderMobile
         )
         // await sendRegistrationEmail(leaderEmail, leadername, teamName)
         // await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)
@@ -170,7 +174,9 @@ export default async function register(
         await sendRegistrationEmail(
             [leaderEmail, memberOneEmail],
             [leadername, memberOneName],
-            teamName
+            teamName,
+            leaderEmail,
+            leaderMobile
         )
         // await sendRegistrationEmail(leaderEmail, leadername, teamName)
         // await sendRegistrationEmail(memberOneEmail, memberOneName, teamName)

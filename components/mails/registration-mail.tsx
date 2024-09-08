@@ -17,9 +17,13 @@ import * as React from 'react'
 export const ResgistrationMailTemplete = ({
     name,
     teamName,
+    leaderMail,
+    leaderMobile,
 }: {
     name: string[]
     teamName: string
+    leaderMail: string
+    leaderMobile: string
 }) => {
     return (
         <Html>
@@ -74,6 +78,12 @@ export const ResgistrationMailTemplete = ({
                                 </Text>
                                 <Text style={{ ...paragraph, marginTop: -5 }}>
                                     <b>Location: IEM/Ashram</b>
+                                </Text>
+
+                                <Text style={{ ...paragraph, marginTop: -5 }}>
+                                    <b>Leader Mail : {leaderMail} </b>
+                                    <br />
+                                    <b>Password: {leaderMobile} </b>
                                 </Text>
 
                                 <Text style={paragraph}>
