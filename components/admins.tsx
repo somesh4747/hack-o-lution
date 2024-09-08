@@ -28,9 +28,9 @@ export default function Admins() {
                 name="Souvik Ghosh"
                 duty={
                     <div className="px-1 py-2 tracking-widest">
-                        <div className="text-xl font-bold">Deep Learning</div>
+                        <div className="text-xl font-bold">AI-ML and IoT</div>
                         <div className="text-small">
-                            Image Detection using Deep-learning
+                            TensorFlow, PyTorch, Raspberry Pi
                         </div>
                     </div>
                 }
@@ -46,7 +46,7 @@ export default function Admins() {
                             Front-End Developer
                         </div>
                         <div className="text-tiny md:text-small">
-                            javaScript
+                            Html, css, JS, python, cpp
                         </div>
                     </div>
                 }
