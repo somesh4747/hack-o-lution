@@ -153,14 +153,13 @@ export default function RegisterPage() {
                                 />
                                 <Input
                                     size="lg"
-                                    type="number"
+                                    type="text"
                                     label="Leader Mobile"
                                     name="mobile"
-                                    // maxLength={10}
-
+                                    maxLength={10}
+                                    minLength={10}
+                                    pattern="\d{10}"
                                     radius="sm"
-                                    // placeholder="Enter leader Name"
-                                    // labelPlacement="outside"
                                     variant="underlined"
                                     startContent={<FaPhone />}
                                     className="w-[350px] "
@@ -219,6 +218,7 @@ export default function RegisterPage() {
                                                 radius="sm"
                                                 name="memberTwoName"
                                                 isRequired
+                                                required
                                                 className="w-[300px]"
                                             />
                                             <Input
@@ -231,6 +231,7 @@ export default function RegisterPage() {
                                                 startContent={<IoMail />}
                                                 name="memberTwoEmail"
                                                 className=""
+                                                required
                                             />
                                             <Input
                                                 size="lg"
@@ -260,6 +261,7 @@ export default function RegisterPage() {
                                                 radius="sm"
                                                 name="memberTwoName"
                                                 className="w-[300px]"
+                                                required
                                             />
                                             <Input
                                                 size="lg"
@@ -270,6 +272,7 @@ export default function RegisterPage() {
                                                 startContent={<IoMail />}
                                                 name="memberTwoEmail"
                                                 className=""
+                                                required
                                             />
                                             <Input
                                                 size="lg"
@@ -296,6 +299,7 @@ export default function RegisterPage() {
                                                 name="memberThreeName"
                                                 className="w-[300px]"
                                                 isRequired
+                                                required
                                             />
                                             <Input
                                                 size="lg"
@@ -308,6 +312,7 @@ export default function RegisterPage() {
                                                 name="memberThreeEmail"
                                                 isRequired
                                                 className=""
+                                                required
                                             />
                                             <Input
                                                 size="lg"

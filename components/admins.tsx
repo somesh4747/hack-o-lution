@@ -54,7 +54,7 @@ export default function Admins() {
                 }
                 linkedin="https://www.linkedin.com/in/soumodip-das-418abb270/"
                 role_="Manager"
-            />
+        />
 
             <BioCards
                 img="/admins/rohan4.jpg"

@@ -8,7 +8,7 @@ export default function AboutPage() {
             <h1 className={cn('text-5xl tracking-wide')}>Rules</h1>
             <ol className="list-decimal md:text-2xl md:w-[800px] font-sans space-y-4 px-8 mt-3 md:px-4">
                 <li>
-                    <div className="md:text-2xl text-left  font-bold">
+                    <div className="md:text-2xl text-left  font-bold ">
                         ***In matters of violating any rules, the decision of
                         the faculty Coordinators and Admins is final. Any
                         misbehavior of any teammate will lead to the
