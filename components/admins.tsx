@@ -21,7 +21,7 @@ export default function Admins() {
                     </div>
                 }
                 linkedin="https://www.linkedin.com/in/somesh-karmakar-a75328291/"
-                role_="Registration head"
+                role_="7001407545"
             />
 
             <BioCards
@@ -36,7 +36,7 @@ export default function Admins() {
                     </div>
                 }
                 linkedin="https://www.linkedin.com/in/souvik-ghosh-1bb26a282/"
-                role_="Registration head"
+                role_="9038509030"
             />
 
             <BioCards
@@ -48,13 +48,13 @@ export default function Admins() {
                             Front-End Developer
                         </div>
                         <div className="text-tiny md:text-small">
-                            Html, css, JS, python, cpp
+                            React, TailwindCSS
                         </div>
                     </div>
                 }
                 linkedin="https://www.linkedin.com/in/soumodip-das-418abb270/"
-                role_="Manager"
-        />
+                role_="9163065159"
+            />
 
             <BioCards
                 img="/admins/rohan4.jpg"
@@ -68,7 +68,7 @@ export default function Admins() {
                     </div>
                 }
                 linkedin="https://www.linkedin.com/in/rohan-sinha-0b926225a/"
-                role_="Logistics"
+                role_="8640000158"
             />
         </div>
     )
@@ -81,7 +81,7 @@ export function BioCards({
     linkedin,
     role_,
 }: {
-    name: string
+    name: React.ReactNode
     duty?: React.ReactNode
     img?: string
     linkedin: string
@@ -93,7 +93,7 @@ export function BioCards({
         <Tooltip content={duty} color="foreground" className="capitalize ">
             <div className="border-none relative rounded-2xl overflow-hidden">
                 <img
-                    alt={name}
+                    alt={name?.toString()}
                     className="object-cover h-[400px]"
                     height={400}
                     src={img}

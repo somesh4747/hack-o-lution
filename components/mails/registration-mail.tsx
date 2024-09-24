@@ -89,11 +89,12 @@ export const ResgistrationMailTemplete = ({
                                 <Text style={paragraph}>
                                     If you have any query, you can contact us at
                                     hackolution2024&#64;gmail.com or you can
-                                    contact to 7001407545 for further
-                                    information...
+                                    contact to Somesh Karmakar &#40;7001407545
+                                    &#41; or Souvik Ghosh &#40;9038509030 &#41;
+                                    for further information...
                                 </Text>
                                 <Text style={{ ...paragraph, marginTop: -5 }}>
-                                    Team, HACK&#123;0&#125;LUTION.
+                                    Team, HACK&#123;0&#125;LUTION
                                 </Text>
                             </Column>
                         </Row>

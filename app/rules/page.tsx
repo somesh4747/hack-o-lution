@@ -24,9 +24,9 @@ export default function AboutPage() {
                 </li>
                 <li>
                     <div className="md:text-xl text-left  ">
-                        It is dedicated to creating a secure, comfortable, and
-                        harassment-free environment for all. Please be
-                        respectful; harassment and abuse will not be allowed.
+                        It is dedicated to creating a secure, comfortable
+                        environment for all. Please be respectful; harassment
+                        and abuse will not be allowed.
                     </div>
                 </li>
                 <li>

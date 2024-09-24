@@ -46,7 +46,6 @@ export const siteConfig = {
     links: {
         // github: 'https://github.com/nextui-org/nextui',
         discord: 'https://discord.com/invite/hjxtZZXsD4',
-        instagram:
-            'https://www.instagram.com/hackolution?igsh=MXd4b3VwaDBneXJsbg==',
+        instagram: 'https://www.instagram.com/hack0lution/',
     },
 }

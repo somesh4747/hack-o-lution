@@ -72,7 +72,11 @@ export const Navbar = () => {
                         className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
                         onClick={() => router.push('/dashBoard')}
                     >
-                        {session.data ? 'DashBoard' : 'Login'}
+                        {!!(new Date() > new Date('11-11-2024'))
+                            ? session.data
+                                ? 'DashBoard'
+                                : 'Login'
+                            : ''}
                     </NextLink>
                 </ul>
             </NavbarContent>
@@ -136,7 +140,11 @@ export const Navbar = () => {
                         href={'/login'}
                         className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
                     >
-                        {session ? 'DashBoard' : 'Login'}
+                        {!!(new Date() > new Date('11-11-2024'))
+                            ? session.data
+                                ? 'DashBoard'
+                                : 'Login'
+                            : ''}
                     </a>
                 </div>
             </NavbarMenu>

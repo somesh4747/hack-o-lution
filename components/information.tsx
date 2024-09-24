@@ -17,14 +17,17 @@ export default function Information() {
                     you&rsquo;re an experienced developer or just starting your
                     journey, Hackolution provides you a platform to challenge
                     yourself, learn new skills and also give the chance to work
-                    on real-world problems. The event is a 12 hour long
+                    on real&#45;world problems. The event is a 12 hour long
                     hackathon scheduled to be held at the Institute of
-                    Engineering & Management, Kolkata – Ashram Campus in mid
-                    September. This event encourages projects from various
-                    domains like Web Development, App Development, Web3 &
-                    Blockchain, Artificial Intelligence, Machine Learning, Cloud
-                    Computing and many more. This event offers exciting prizes
-                    and build networking opportunities for all participants.
+                    Engineering and Management, Kolkata &#45; Ashram Campus on{' '}
+                    <span className=" text-green-300 tracking-wider">
+                        11th November 2024.{' '}
+                    </span>
+                    This event encourages projects from various domains like Web
+                    Development, App Development, Web3 and Blockchain,
+                    Artificial Intelligence, Machine Learning, Cloud Computing
+                    and many more. This event offers exciting prizes and
+                    provides networking opportunities for all participants.
                 </div>
             </div>
             <div className="flex justify-center items-center mt-8">

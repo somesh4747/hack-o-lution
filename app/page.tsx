@@ -9,6 +9,7 @@ import AboutIdeas from '@/components/about-ideas'
 import Admins from '@/components/admins'
 import Footer from '@/components/footer'
 import FacultyCoOrdinators from '@/components/faculty'
+import { Card, Divider } from '@nextui-org/react'
 
 export default function Home() {
     // using the event date to create a timer
@@ -109,6 +110,37 @@ export default function Home() {
                     Faculty Co-ordinators
                 </h3>
                 <FacultyCoOrdinators />
+            </section>
+            <section>
+                {/* <h3 className="text-5xl md:text-7xl mt-24 mb-3 text-center">
+                    Contact
+                </h3> */}
+                {/* <Card isBlurred>
+                    <div className="flex flex-col justify-center items-center  text-center font-mono flex-wrap md:h-[100px] space-y-5 md:space-y-0 py-4">
+                        <div className="">
+                            <div className="text-xl font-bold">
+                                Somesh Karmakar
+                            </div>
+                            7001407545
+                        </div>
+                        <div>
+                            <div className="text-xl font-bold">
+                                Souvik Ghosh
+                            </div>
+                            9038509030
+                        </div>
+                        <div>
+                            <div className="text-xl font-bold">
+                                Soumodip Das
+                            </div>
+                            9163065159
+                        </div>
+                        <div>
+                            <div className="text-xl font-bold">Rohan Sinha</div>{' '}
+                            8640000158
+                        </div>
+                    </div>
+                </Card> */}
             </section>
             <footer>
                 <Footer />
