@@ -10,8 +10,8 @@ export default function Information() {
                 <div className="md:text-7xl text-6xl font-medium">about</div>
                 <div className="max-w-[900px] text-2xl h-auto p-4 tracking-wide text-center ">
                     &quot;HACK&#123;<span className="text-green-300">0</span>
-                    &#125;LUTION&quot; is a open theme hackathon at the Ashram
-                    Campus, it&rsquo;s the great opportunities for all tech
+                    &#125;LUTION&quot; is an open theme hackathon at the Ashram
+                    Campus, it&rsquo;s a great opportunities for all tech
                     enthusiasts to dive into a 12 hour long marathon of
                     creativity, innovation, coding and collaboration. Whether
                     you&rsquo;re an experienced developer or just starting your
