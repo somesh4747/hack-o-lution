@@ -3,6 +3,7 @@ import db from '@/utils/db'
 import { Button } from '@nextui-org/button'
 import { revalidatePath } from 'next/cache'
 import { Avatar } from '@nextui-org/avatar'
+import SubmissionForm from '@/components/submission-form'
 
 export default async function DashBoard() {
     const session = await auth()
@@ -75,7 +76,10 @@ export default async function DashBoard() {
             </div>
 
             {/* logout button */}
-            <div></div>
+
+            <div>
+                <SubmissionForm teamId={team?.id} />
+            </div>
         </div>
     )
 }
