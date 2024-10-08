@@ -34,13 +34,10 @@ export default function RegisterPage({ teamId }: { teamId?: string }) {
             <div className="flex flex-col justify-start items-center">
                 <form action={action}>
                     <Card className="md:w-[600px] my-9" shadow="lg">
-                        <CardHeader className="flex gap-3 md:text-6xl text-5xl ">
+                        <CardHeader className="flex gap-3 md:text-6xl text-5xl justify-center items-center">
                             <div className="flex flex-col">
                                 <p className="text-md tracking-wide">
                                     Project Submission
-                                </p>
-                                <p className="text-small text-default-500">
-                                    HACK&#123;0&#125;LUTION
                                 </p>
                             </div>
                         </CardHeader>
@@ -85,7 +82,7 @@ export default function RegisterPage({ teamId }: { teamId?: string }) {
 
                                 <Textarea
                                     name="remarks"
-                                    label="Remarks"
+                                    label="Feedback"
                                     variant="faded"
                                     size="lg"
                                     radius="sm"
