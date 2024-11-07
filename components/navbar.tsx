@@ -61,12 +61,12 @@ export const Navbar = () => {
                     >
                         Rules
                     </NextLink>
-                    <NextLink
+                    {/* <NextLink
                         href={'/register'}
                         className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
                     >
                         Register
-                    </NextLink>
+                    </NextLink> */}
                     <NextLink
                         href={'/login'}
                         className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
@@ -130,12 +130,12 @@ export const Navbar = () => {
                     >
                         Rules
                     </a>
-                    <a
+                    {/* <a
                         href={'/register'}
                         className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"
                     >
                         Register
-                    </a>
+                    </a> */}
                     <a
                         href={'/login'}
                         className="text-xl tracking-wide hover:text-stone-400 transition-all duration-250"

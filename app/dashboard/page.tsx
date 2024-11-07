@@ -36,6 +36,7 @@ export default async function DashBoard() {
                     'use server'
                     await signOut()
                     revalidatePath('/dashBoard')
+                    revalidatePath('/login')
                 }}
             >
                 <Button
@@ -51,18 +52,18 @@ export default async function DashBoard() {
             <div className="text-xl flex flex-col justify-center items-center mx-4 text-center tracking-wide">
                 <div>
                     Team id :{' '}
-                    <span className="!text-sky-400 font-sans">{team?.id}</span>
+                    <span className="!text-sky-400 font-sans ">{team?.id}</span>
                 </div>
                 <div>
                     Team Name :{' '}
-                    <span className="!text-green-400">{team?.teamName}</span>
+                    <span className="!text-green-400 ">{team?.teamName}</span>
                 </div>
 
-                <div className="flex justify-center flex-wrap gap-3 mt-4 flex-col md:flex-row">
+                <div className="flex justify-center w-full flex-wrap gap-3 mt-4 md:flex-row">
                     {members.map((mem, index) => (
                         <div
                             key={index}
-                            className="flex-col flex justify-center items-center"
+                            className="flex-col flex  justify-center items-center"
                         >
                             <Avatar
                                 // name={mem.name}

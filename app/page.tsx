@@ -13,7 +13,7 @@ import { Card, Divider } from '@nextui-org/react'
 
 export default function Home() {
     // using the event date to create a timer
-    const eventDate = new Date('November 11, 2024 9:00:00')
+    const eventDate = new Date('November 11, 2024 17:30:00')
     const {
         totalSeconds,
         seconds,
