@@ -80,7 +80,7 @@ export default function RegisterPage({ teamId }: { teamId?: string }) {
                                     isRequired
                                 />
 
-                                <Textarea
+                                {/* <Textarea
                                     name="remarks"
                                     label="Feedback"
                                     variant="faded"
@@ -89,7 +89,7 @@ export default function RegisterPage({ teamId }: { teamId?: string }) {
                                     labelPlacement="outside"
                                     placeholder="Any Feedback"
                                     className="text-3xl"
-                                />
+                                /> */}
                             </div>
                         </CardBody>
                         <Divider />
